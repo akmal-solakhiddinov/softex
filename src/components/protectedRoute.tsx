@@ -1,7 +1,11 @@
-import { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-const ProtectedRoute = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+const ProtectedRoute:React.FC <Props>= ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
